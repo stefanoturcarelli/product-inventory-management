@@ -163,7 +163,8 @@ body {
     padding: 3rem 0;
 }
 
-.login-btn {
+.login-btn,
+.submit-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,8 +180,58 @@ body {
     transition: background-color 0.3s ease;
 }
 
-    .login-btn:hover {
+    .login-btn:hover,
+    .submit-btn:hover {
         background-color: #ff6b6b;
     }
+
+/* ! ------------------------------------------------------------------------ */
+
+.product-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.instructions {
+    padding-bottom: 1.5rem;
+}
+
+/* ! ------------------------------------------------------------------------ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
 /* ! ------------------------------------------------------------------------ */

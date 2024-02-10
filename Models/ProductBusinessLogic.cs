@@ -7,19 +7,12 @@ namespace ProductInventoryManagement.Models
 {
     public class ProductBusinessLogic
     {
-
-        // Create inventory list with products to be displayed
-        public static List<Product> productList = new List<Product>()
-        {
-            // Add a sample product
-            new Product("Chocolate", "100% Organic", 9.99)
-        };
-
-
-        // Method to add a product to the inventory list
+        // Get the product list and add a new product to it
         public bool AddProduct(Product product)
         {
-            productList.Add(product);
+            List<Product> products = Database.GetProductList();
+
+            products.Add(product);
 
             return true;
         }

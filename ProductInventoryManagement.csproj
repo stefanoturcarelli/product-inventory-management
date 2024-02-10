@@ -95,15 +95,18 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\InventoryManagementController.cs" />
+    <Compile Include="Controllers\BatchManagementController.cs" />
     <Compile Include="Controllers\ProductRegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Inventory.cs" />
-    <Compile Include="Models\InventoryBusinessLogic.cs" />
+    <Compile Include="Models\AutoIncrement.cs" />
+    <Compile Include="Models\Database.cs" />
+    <Compile Include="Models\Batch.cs" />
+    <Compile Include="Models\BatchBusinessLogic.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductBusinessLogic.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -111,7 +114,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\ProductRegistration\Index.cshtml" />
-    <Content Include="Views\InventoryManagement\Index.cshtml" />
+    <Content Include="Views\BatchManagement\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
