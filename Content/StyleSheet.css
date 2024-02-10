@@ -164,7 +164,7 @@ body {
 }
 
 .login-btn,
-.submit-btn {
+.action-btn {
     display: flex;
     align-items: center;
     justify-content: center;
