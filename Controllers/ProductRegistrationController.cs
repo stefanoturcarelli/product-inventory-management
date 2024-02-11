@@ -22,5 +22,28 @@ namespace ProductInventoryManagement.Controllers
         {
             return RedirectToAction("Index", "BatchManagement");
         }
+
+        public ActionResult AddNewRecord(string ProductName, string Description, double Price, int BatchQuantity, DateTime BatchEntryDate)
+        {
+            Database database = new Database();
+
+            List<Product> productsList = database.GetProductsList();
+
+            List<Batch> batchList = database.GetBatchList();
+
+            MergedRecord m = new MergedRecord(ProductName, Description, Price, BatchQuantity, BatchEntryDate);
+
+            // Add fields to their respective records
+
+            Product product = new Product(m.ProductName, m.Description, m.Price);
+
+            Batch batch = new Batch(product.ProductId, BatchQuantity, BatchEntryDate);
+
+            productsList.Add(product);
+
+            batchList.Add(batch);
+
+            return RedirectToAction("Index");
+        }
     }
 }

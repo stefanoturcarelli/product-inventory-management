@@ -1,4 +1,4 @@
-﻿@model List<ProductInventoryManagement.Models.ProductViewModel>
+﻿@model List<ProductInventoryManagement.Models.MergedRecord>
 
 @{
     Layout = null;
@@ -47,7 +47,7 @@
                 <h1>Add a new product</h1>
                 <div class="description-container">
                     <p class="instructions">Please input the following product information:</p>
-                    <form form action="@Url.Action("AddProduct", "ProductRegistration")" method="post" class="product-form">
+                    <form form action="@Url.Action("AddNewRecord", "ProductRegistration")" method="post" class="product-form">
                         <div class="form-group">
                             <label for="product-name">Name:</label>
                             <input type="text" id="product-name" name="Name">
@@ -62,13 +62,17 @@
                         </div>
                         <div class="form-group">
                             <label for="stock-quantity">Stock Quantity:</label>
-                            <input type="text" id="stock-quantity" name="StockQuantity">
+                            <input type="text" id="stock-quantity" name="BatchQuantity">
+                        </div>
+                        <div class="form-group">
+                            <label for="batch-entry-date">Batch Entry Date:</label>
+                            <input type="datetime-local" id="batch-entry-date" name="BatchEntryDate">
                         </div>
                         <div class="login-btn-container">
                             <button class="submit-btn" type="submit">Submit</button>
                         </div>
                         <div class="login-btn-container">
-                            <button class="submit-btn" type="submit">Table</button>
+                            <a href="@Url.Action("Index", "BatchManagement")" class="login-btn">Table</a>
                         </div>
                     </form>
                 </div>

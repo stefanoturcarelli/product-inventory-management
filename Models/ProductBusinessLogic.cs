@@ -10,7 +10,9 @@ namespace ProductInventoryManagement.Models
         // Get the product list and add a new product to it
         public bool AddProduct(Product product)
         {
-            List<Product> products = Database.GetProductList();
+            Database database = new Database();
+
+            List<Product> products = database.GetProductsList();
 
             products.Add(product);
 

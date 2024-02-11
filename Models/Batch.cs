@@ -7,18 +7,19 @@ namespace ProductInventoryManagement.Models
 {
     public class Batch
     {
-        private static readonly AutoIncrement _inventoryIdState = new AutoIncrement();
+        private static readonly AutoIncrement _batchIdState = new AutoIncrement();
 
         public int BatchId { get; set; }
         public int ProductId { get; set; }
         public int BatchQuantity { get; set; }
         public DateTime BatchEntryDate { get; set; }
 
-        public Batch(int productId, int stockQuantity)
+        public Batch(int productId, int batchQuantity, DateTime batchEntryDate)
         {
-            BatchId = _inventoryIdState.GenerateId();
+            BatchId = _batchIdState.GenerateId();
             ProductId = productId;
-            BatchQuantity = stockQuantity;
+            BatchQuantity = batchQuantity;
+            BatchEntryDate = batchEntryDate;
         }
     }
 }

@@ -104,9 +104,10 @@
     <Compile Include="Models\Database.cs" />
     <Compile Include="Models\Batch.cs" />
     <Compile Include="Models\BatchBusinessLogic.cs" />
+    <Compile Include="Models\MergedBusinessLogic.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductBusinessLogic.cs" />
-    <Compile Include="Models\ProductViewModel.cs" />
+    <Compile Include="Models\MergedRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
