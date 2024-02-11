@@ -1,4 +1,4 @@
-﻿@model List<ProductInventoryManagement.Models.Product>
+﻿@model List<ProductInventoryManagement.Models.CombinedListModel>
 @{
     Layout = null;
 }
@@ -50,21 +50,23 @@
                 <div>
                     <table>
                         <tr>
-                            <th>Product ID</th>
                             <th>Product Name</th>
+                            <th>Product Description</th>
                             <th>Product Price</th>
-                            <th>Product Quantity</th>
-                            <th>Inventory ID</th>
+                            <th>Batch Id</th>
+                            <th>Batch Quantity</th>
+                            <th>Batch Entry Date</th>
                         </tr>
                         @{
                             foreach (var product in Model)
                             {
                                 <tr>
-                                    <td>@product.ProductId</td>
+                                    <td>@product.Name</td>
                                     <td>@product.Description</td>
                                     <td>@product.Price</td>
-                                    @*<td>@product.BatchQuantity</td>*@
-                                    @*<td>@product.BatchEntryDate</td>*@
+                                    <td>@product.BatchId</td>
+                                    <td>@product.BatchQuantity</td>
+                                    <td>@product.BatchEntryDate</td>
                                 </tr>
                             }
                         }

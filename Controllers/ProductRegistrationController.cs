@@ -37,9 +37,9 @@ namespace ProductInventoryManagement.Controllers
 
             Product product = new Product(m.ProductName, m.Description, m.Price);
 
-            Batch batch = new Batch(product.ProductId, BatchQuantity, BatchEntryDate);
-
             productsList.Add(product);
+
+            Batch batch = new Batch(product.ProductId, BatchQuantity, BatchEntryDate);
 
             batchList.Add(batch);
 

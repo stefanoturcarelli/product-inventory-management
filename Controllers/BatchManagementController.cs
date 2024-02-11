@@ -13,11 +13,11 @@ namespace ProductInventoryManagement.Controllers
         // GET: BatchManagement
         public ActionResult Index()
         {
-            Database database = new Database();
+           MergedBusinessLogic mergedBusinessLogic = new MergedBusinessLogic();
 
-            var products = database.GetProductsList();
+            var combinedList = mergedBusinessLogic.GetCombinedList();
 
-            return View(products);
+            return View(combinedList);
         }
     }
 }

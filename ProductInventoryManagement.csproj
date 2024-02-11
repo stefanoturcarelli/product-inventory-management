@@ -101,6 +101,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AutoIncrement.cs" />
+    <Compile Include="Models\CombinedListModel.cs" />
     <Compile Include="Models\Database.cs" />
     <Compile Include="Models\Batch.cs" />
     <Compile Include="Models\BatchBusinessLogic.cs" />
