@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 namespace ProductInventoryManagement.Models
 {
     public class ProductBusinessLogic
     {
-        // Get the product list and add a new product to it
-        public bool AddProduct(Product product)
+        readonly Database db = new Database();
+
+        public bool AddProductToProductList(Product product)
         {
-            Database database = new Database();
+            List<Product> productList = db.GetProductsList();
 
-            List<Product> products = database.GetProductsList();
-
-            products.Add(product);
+            productList.Add(product);
 
             return true;
         }

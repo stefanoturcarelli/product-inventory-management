@@ -1,10 +1,5 @@
 ﻿using ProductInventoryManagement.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using System.Web.UI;
 
 namespace ProductInventoryManagement.Controllers
 {
@@ -13,11 +8,22 @@ namespace ProductInventoryManagement.Controllers
         // GET: BatchManagement
         public ActionResult Index()
         {
-           MergedBusinessLogic mergedBusinessLogic = new MergedBusinessLogic();
+            MergedRecordBusinessLogic mergedBusinessLogic = new MergedRecordBusinessLogic();
 
             var combinedList = mergedBusinessLogic.GetCombinedList();
 
             return View(combinedList);
+        }
+
+        public ActionResult DeleteRecord(int productId)
+        {
+            Database db = new Database();
+
+            db.GetProductsList().Remove(db.GetProductsList().Find(x => x.ProductId == productId));
+
+            db.GetBatchList().Remove(db.GetBatchList().Find(x => x.ProductId == productId));
+
+            return RedirectToAction("Index");
         }
     }
 }

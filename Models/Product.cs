@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace ProductInventoryManagement.Models
+﻿namespace ProductInventoryManagement.Models
 {
     /// <summary>
     /// Product class representing a product item
